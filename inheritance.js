@@ -40,12 +40,16 @@ var Child = (function() {
 
 var base = new Base("Gavin");
 base.setBaseVar(10);
-var one = new Child("Aidy");
-one.setBaseVar(5);
-one.changeName("Johan");
-var two = new Child("Paul");
-two.setChildVar("ho");
+var childOne = new Child("Aidy");
+childOne.setBaseVar(5);
+childOne.changeName("Johan");
+var childTwo = new Child("Paul");
+childTwo.setChildVar("ho");
 console.log("Base", base);
 console.log("one", one);
 console.log("two", two);
+console.log("childOne is instance of Child: ", childOne instanceof Child);
+console.log("childOne is instance of Base: ", childOne instanceof Base);
+console.log("base is instance of Child: ", base instanceof Child);
+console.log("base is instance of Base: ", base instanceof Base);
 
